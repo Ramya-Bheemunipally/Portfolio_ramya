@@ -15,6 +15,10 @@
     <header>
         <a href="#" class="logo">Ramyasri</a>
 
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <nav>
             <a href="#" class="active">Home</a>
             <a href="#skills">Skills</a>
@@ -179,15 +183,18 @@
 
         <div class="experience-box">
             <p>
-                Worked on developing a Telugu Large Language Model (LLM) for a Telangana Government AI initiative.
+                Worked on developing a Telugu Large Language Model (LLM)
+                for a Telangana Government AI initiative.
             </p>
 
             <p>
-                Led a team of 200+ developers and coordinated model training activities effectively.
+                Led a team of 200+ developers and coordinated model
+                training activities effectively.
             </p>
 
             <p>
-                Ensured ethical AI policy compliance through collaboration with government agencies.
+                Ensured ethical AI policy compliance through collaboration
+                with government agencies.
             </p>
         </div>
     </section>
@@ -248,6 +255,28 @@
         }
 
         typeEffect();
+
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav");
+
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("open");
+            const isOpen = nav.classList.contains("open");
+            menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        nav.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                if (window.innerWidth <= 995) {
+                    nav.classList.remove("open");
+                    menuToggle.setAttribute("aria-expanded", "false");
+                    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                }
+            });
+        });
     </script>
 
 </body>

@@ -52,6 +52,14 @@ header{
     transform:scale(1.05);
 }
 
+.menu-toggle{
+    display:none;
+    background:transparent;
+    color:#b74b4b;
+    font-size:2.4rem;
+    cursor:pointer;
+}
+
 nav{
     display:flex;
     align-items:center;
@@ -87,8 +95,8 @@ nav a.active{
 /* SECTION */
 
 section{
-    min-height:100vh;
-    padding:7rem 9% 3rem;
+    min-height:auto;
+    padding:6rem 9% 3rem;
 }
 
 /* HOME */
@@ -99,7 +107,8 @@ section{
     align-items:center;
     gap:8rem;
     background-color:white;
-    padding-top:18rem;
+    padding-top:14rem;
+    padding-bottom:3rem;
 }
 
 .home-content h1{
@@ -299,44 +308,51 @@ span{
 @media(max-width:995px){
 
     header{
-        position:relative;
-        flex-direction:column;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        flex-direction:row;
         align-items:center;
-        justify-content:center;
-        padding:2rem 1.5rem;
-        gap:1.5rem;
+        justify-content:space-between;
+        padding:1.2rem 4%;
+        gap:1rem;
     }
 
-    .logo{
-        font-size:3.2rem;
-        margin-bottom:0.5rem;
-    }
-
-    nav{
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        gap:1.5rem;
-        overflow:visible;
-    }
-
-    nav a{
-        font-size:2rem;
+    .menu-toggle{
         display:block;
     }
 
-    section{
-        padding:4rem 6% 3rem;
-        min-height:auto;
+    nav{
+        position:absolute;
+        top:100%;
+        left:4%;
+        right:4%;
+        display:none;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:1.2rem;
+        padding:1.4rem 1rem;
+        background:white;
+        border-radius:1.4rem;
+        box-shadow:0 10px 25px rgba(0,0,0,0.12);
+        overflow:visible;
+    }
+
+    nav.open{
+        display:flex;
+    }
+
+    nav a{
+        font-size:1.6rem;
     }
 
     .home{
         flex-direction:column;
         text-align:center;
         gap:3rem;
-        padding-top:3rem;
+        padding-top:16rem;
     }
 
     .home-img img{
