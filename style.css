@@ -300,7 +300,12 @@ span{
 
     header{
         flex-direction:column;
-        padding:1.5rem 2rem;
+        padding:1.2rem 2rem;
+        align-items:center;
+    }
+
+    .logo{
+        margin-bottom:1rem;
     }
 
     nav{
@@ -309,7 +314,8 @@ span{
         flex-direction:column;
         align-items:center;
         gap:1rem;
-        margin-top:1rem;
+        margin-top:0.5rem;
+        padding-bottom:1rem;
     }
 
     nav a{
@@ -319,29 +325,30 @@ span{
     .home{
         flex-direction:column;
         text-align:center;
-        gap:5rem;
-        padding-top:28rem;
+        gap:3rem;
+        padding-top:22rem;
     }
 
     .home-img img{
-        width:70vw;
-        height:70vw;
+        width:60vw;
+        height:60vw;
+        margin-top:1rem;
     }
 
     .home-content h1{
-        font-size:5rem;
+        font-size:4.2rem;
     }
 
     .home-content h3{
-        font-size:3rem;
+        font-size:2.6rem;
     }
 
     .home-content p{
-        font-size:1.6rem;
+        font-size:1.5rem;
     }
 
     section{
-        padding:6rem 6% 4rem;
+        padding:5rem 6% 4rem;
     }
 
     .heading{
