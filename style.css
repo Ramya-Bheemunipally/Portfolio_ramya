@@ -299,13 +299,17 @@ span{
 @media(max-width:995px){
 
     header{
+        position:relative;
         flex-direction:column;
-        padding:1.2rem 2rem;
         align-items:center;
+        justify-content:center;
+        padding:2rem 1.5rem;
+        gap:1.5rem;
     }
 
     .logo{
-        margin-bottom:1rem;
+        font-size:3.2rem;
+        margin-bottom:0.5rem;
     }
 
     nav{
@@ -313,52 +317,63 @@ span{
         display:flex;
         flex-direction:column;
         align-items:center;
-        gap:1rem;
-        margin-top:0.5rem;
-        padding-bottom:1rem;
+        justify-content:center;
+        gap:1.5rem;
+        overflow:visible;
     }
 
     nav a{
-        font-size:1.45rem;
+        font-size:2rem;
+        display:block;
+    }
+
+    section{
+        padding:4rem 6% 3rem;
+        min-height:auto;
     }
 
     .home{
         flex-direction:column;
         text-align:center;
         gap:3rem;
-        padding-top:22rem;
+        padding-top:3rem;
     }
 
     .home-img img{
-        width:60vw;
-        height:60vw;
+        width:65vw;
+        height:65vw;
         margin-top:1rem;
     }
 
     .home-content h1{
-        font-size:4.2rem;
+        font-size:4.5rem;
     }
 
     .home-content h3{
-        font-size:2.6rem;
+        font-size:2.7rem;
     }
 
     .home-content p{
         font-size:1.5rem;
-    }
-
-    section{
-        padding:5rem 6% 4rem;
+        line-height:1.7;
     }
 
     .heading{
-        font-size:4rem;
+        font-size:3.8rem;
         margin-bottom:2rem;
     }
 
     .contact-box p{
-        font-size:1.45rem;
-        line-height:1.7;
-        overflow-wrap:anywhere;
+        font-size:1.4rem;
+        overflow-wrap:break-word;
+        word-break:break-word;
+    }
+
+    .box,
+    .edu-box,
+    .publication-box,
+    .experience-box,
+    .contact-box{
+        padding:2.2rem;
     }
 }
